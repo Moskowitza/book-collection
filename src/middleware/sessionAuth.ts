@@ -4,6 +4,7 @@ import session from "express-session";
 export const register = (app: any) => {
   // Create the OIDC client
   const oidc = new ExpressOIDC({
+    appBaseUrl: "http://localhost:8080",
     client_id: process.env.OKTA_CLIENT_ID,
     client_secret: process.env.OKTA_CLIENT_SECRET,
     issuer: `${process.env.OKTA_ORG_URL}/oauth2/default`,
