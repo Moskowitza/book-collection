@@ -7,11 +7,11 @@ import {
   Scopes,
   Table,
   UpdatedAt,
-} from 'sequelize-typescript';
-import { Author } from './Author';
-import { Genre } from './Genre';
-import { BookAuthor } from './BookAuthor';
-import { BookGenre } from './BookGenre';
+} from "sequelize-typescript";
+import { Author } from "./Author";
+import { BookAuthor } from "./BookAuthor";
+import { BookGenre } from "./BookGenre";
+import { Genre } from "./Genre";
 
 @Scopes(() => ({
   Author: {
@@ -22,20 +22,20 @@ import { BookGenre } from './BookGenre';
       },
     ],
   },
-  genre: {
-    include: [
-      {
-        model: Genre,
-        through: { attributes: [] },
-      },
-    ],
-  },
   full: {
     include: [
       {
         model: Author,
         through: { attributes: [] },
       },
+      {
+        model: Genre,
+        through: { attributes: [] },
+      },
+    ],
+  },
+  genre: {
+    include: [
       {
         model: Genre,
         through: { attributes: [] },

@@ -1,14 +1,14 @@
 import {
-  Model,
-  Column,
-  Table,
   BelongsToMany,
-  Scopes,
+  Column,
   CreatedAt,
+  Model,
+  Scopes,
+  Table,
   UpdatedAt,
-} from 'sequelize-typescript';
-import { Book } from './Book';
-import { BookAuthor } from './BookAuthor';
+} from "sequelize-typescript";
+import { Book } from "./Book";
+import { BookAuthor } from "./BookAuthor";
 
 @Scopes(() => ({
   books: {
@@ -23,22 +23,22 @@ import { BookAuthor } from './BookAuthor';
 @Table
 export class Author extends Model<Author> {
   @Column
-  firstName!: string;
+  public firstName!: string;
 
   @Column
-  lastName!: string;
+  public lastName!: string;
 
   @Column
-  birthday?: Date;
+  public birthday?: Date;
 
   @BelongsToMany(() => Book, () => BookAuthor)
-  books?: Book[];
+  public books?: Book[];
 
   @CreatedAt
   @Column
-  createdAt!: Date;
+  public createdAt!: Date;
 
   @UpdatedAt
   @Column
-  updatedAt!: Date;
+  public updatedAt!: Date;
 }

@@ -5,6 +5,9 @@ import path from "path";
 import winston from "winston";
 import * as sessionAuth from "./middleware/sessionAuth";
 import * as routes from "./routes";
+import { authors } from "./routes/authors";
+import { books } from "./routes/books";
+import { sequelize } from "./sequelize";
 dotenv.config();
 const { combine } = winston.format;
 const app = express();
@@ -34,6 +37,10 @@ class MyStream {
 }
 app.use(morgan("combined", { stream: new MyStream() }));
 
+app.use(express.urlencoded({ extended: true }));
+
+// middleware for json body parsing
+app.use(express.json({ limit: "5mb" }));
 // Configure Express to use EJS
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -43,8 +50,11 @@ sessionAuth.register(app);
 
 // Configure routes
 routes.register(app);
-
+app.use("/books", books);
+app.use("/authors", authors);
 // start the Express server
-app.listen(port, () => {
-  logger.info(`server started at http://localhost:${port}`);
-});
+sequelize.sync({ force: true }).then(() =>
+  app.listen(port, () => {
+    logger.info(`server started at http://localhost:${port}`);
+  })
+);

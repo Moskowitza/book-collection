@@ -9,6 +9,7 @@ import {
   UpdatedAt,
 } from "sequelize-typescript";
 import { Book } from "./Book";
+import { BookGenre } from "./BookGenre";
 
 @Scopes(() => ({
   books: {
@@ -26,8 +27,8 @@ export class Genre extends Model<Genre> {
   @Column
   public name!: string;
 
-  @BelongsToMany(() => Book, () => Book)
-  public movies?: Book[];
+  @BelongsToMany(() => Book, () => BookGenre)
+  public books?: Book[];
 
   @CreatedAt
   @Column
