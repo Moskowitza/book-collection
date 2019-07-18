@@ -19,12 +19,20 @@
   "license": "ISC",
   "dependencies": {
     "@okta/oidc-middleware": "^1.0.2",
+    "@types/bluebird": "^3.5.27",
     "@types/morgan": "^1.7.35",
+    "bluebird": "^3.5.5",
+    "body-parser": "^1.19.0",
     "dotenv": "^8.0.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "morgan": "^1.9.1",
+    "pg": "^7.11.0",
+    "pg-promise": "^8.7.4",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^5.10.1",
+    "sequelize-typescript": "^1.0.0-beta.3",
     "winston": "^3.2.1"
   },
   "devDependencies": {
@@ -33,6 +41,7 @@
     "@types/express-session": "^1.15.13",
     "@types/fs-extra": "^8.0.0",
     "@types/node": "^12.6.6",
+    "@types/pg": "^7.4.14",
     "@types/shelljs": "^0.8.5",
     "fs-extra": "^8.1.0",
     "nodemon": "^1.19.1",

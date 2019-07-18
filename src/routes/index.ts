@@ -6,7 +6,8 @@ export const register = (app: express.Application) => {
 
   // define a route handler for the default home page
   app.get("/", (req: any, res) => {
-    res.render("index");
+    const user = req.userContext ? req.userContext.userinfo : null;
+    res.render("index", { isAuthenticated: req.isAuthenticated(), user });
   });
 
   // define a secure route handler for the login page that redirects to /books
@@ -20,8 +21,9 @@ export const register = (app: express.Application) => {
     res.redirect("/");
   });
 
-  // define a secure route handler for the guitars page
+  // define a secure route handler for the Books page
   app.get("/books", oidc.ensureAuthenticated(), (req: any, res) => {
-    res.render("books");
+    const user = req.userContext ? req.userContext.userinfo : null;
+    res.render("books", { isAuthenticated: req.isAuthenticated(), user });
   });
 };
