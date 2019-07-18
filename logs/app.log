@@ -1,1 +1,19 @@
 {"message":"server started at http://localhost:8080","level":"info","service":"user-service"}
+{"message":"server started at http://localhost:8080","level":"info","service":"user-service"}
+{"message":"server started at http://localhost:8080","level":"info","service":"user-service"}
+{"message":"server started at http://localhost:8080","level":"info","service":"user-service"}
+{"message":"::1 - - [17/Jul/2019:22:23:31 +0000] \"GET / HTTP/1.1\" 200 713 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\"\n","level":"info","service":"user-service"}
+{"message":"::1 - - [17/Jul/2019:22:23:32 +0000] \"GET /books HTTP/1.1\" 404 144 \"http://localhost:8080/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\"\n","level":"info","service":"user-service"}
+{"message":"server started at http://localhost:8080","level":"info","service":"user-service"}
+{"message":"server started at http://localhost:8080","level":"info","service":"user-service"}
+{"message":"server started at http://localhost:8080","level":"info","service":"user-service"}
+{"message":"::1 - - [18/Jul/2019:13:27:46 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\"\n","level":"info","service":"user-service"}
+{"message":"::1 - - [18/Jul/2019:13:27:47 +0000] \"GET /books HTTP/1.1\" 404 144 \"http://localhost:8080/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\"\n","level":"info","service":"user-service"}
+{"message":"::1 - - [18/Jul/2019:13:27:52 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\"\n","level":"info","service":"user-service"}
+{"message":"server started at http://localhost:8080","level":"info","service":"user-service"}
+{"message":"server started at http://localhost:8080","level":"info","service":"user-service"}
+{"message":"::1 - - [18/Jul/2019:13:28:55 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\"\n","level":"info","service":"user-service"}
+{"message":"::1 - - [18/Jul/2019:13:28:56 +0000] \"GET /books HTTP/1.1\" 302 56 \"http://localhost:8080/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\"\n","level":"info","service":"user-service"}
+{"message":"::1 - - [18/Jul/2019:13:28:56 +0000] \"GET /login HTTP/1.1\" 401 1359 \"http://localhost:8080/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\"\n","level":"info","service":"user-service"}
+{"message":"::1 - - [18/Jul/2019:13:29:24 +0000] \"GET /books HTTP/1.1\" 302 56 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\"\n","level":"info","service":"user-service"}
+{"message":"::1 - - [18/Jul/2019:13:29:24 +0000] \"GET /login HTTP/1.1\" 401 1359 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\"\n","level":"info","service":"user-service"}

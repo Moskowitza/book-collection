@@ -1,18 +1,21 @@
+import dotenv from "dotenv";
 import express from "express";
 import morgan from "morgan";
 import path from "path";
 import winston from "winston";
-// import { errorLog, accessLog } from './config/logger';
-
+import * as sessionAuth from "./middleware/sessionAuth";
+import * as routes from "./routes";
+dotenv.config();
+const { combine } = winston.format;
 const app = express();
-const port = 8080; // default port to listen
+const port = process.env.SERVER_PORT;
 
 const logger = winston.createLogger({
   defaultMeta: { service: "user-service" },
-  format: winston.format.json(),
+  format: combine(winston.format.json(), winston.format.timestamp()),
   level: "info",
   transports: [
-    new winston.transports.Console(),
+    // new winston.transports.Console(),
     new winston.transports.File({ filename: "./logs/app.log" }),
   ],
 });
@@ -35,11 +38,11 @@ app.use(morgan("combined", { stream: new MyStream() }));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-// define a route handler for the default home page
-app.get("/", (req, res) => {
-  // render the index template
-  res.render("index");
-});
+// Configure session auth
+sessionAuth.register(app);
+
+// Configure routes
+routes.register(app);
 
 // start the Express server
 app.listen(port, () => {
