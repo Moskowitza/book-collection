@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@okta/oidc-middleware": "^2.0.0",
+    "@okta/oidc-middleware": "^1.0.2",
     "@types/morgan": "^1.7.35",
     "dotenv": "^8.0.0",
     "ejs": "^2.6.2",
