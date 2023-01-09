@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@okta/oidc-middleware": "^1.0.2",
+    "@okta/oidc-middleware": "^5.0.0",
     "@types/bluebird": "^3.5.27",
     "@types/morgan": "^1.7.35",
     "@types/validator": "^10.11.1",
